@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="form">
+        <label>
+          Day
+          <input
+            type="text"
+            placeholder="DD"
+            class="day"
+            oninput="this.value = this.value.replace(/[^0-9]/g , '')"
+          />
+          <p class="error"></p>
+        </label>
+        <label>
+          MONTH
+          <input
+            type="text"
+            placeholder="MM"
+            class="month"
+            oninput="this.value = this.value.replace(/[^0-9]/g , '')"
+          />
+          <p class="error"></p>
+        </label>
+        <label>
+          YEAR
+          <input
+            type="text"
+            placeholder="YYYY"
+            class="year"
+            oninput="this.value = this.value.replace(/[^0-9]/g , '')"
+          />
+          <p class="error"></p>
+        </label>
+      </form>
+
+      <div class="line-arrow">
+        <div class="line"></div>
+        <img
+          src="/src/assets/images/icon-arrow.svg"
+          alt="arrow"
+          class="arrow"
+        />
+      </div>
+
+      <div class="dates">
+        <h1 class="years"><span>--</span>years</h1>
+        <h1 class="months"><span>--</span>months</h1>
+        <h1 class="days"><span>--</span>days</h1>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
